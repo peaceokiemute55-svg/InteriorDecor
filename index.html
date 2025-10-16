@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interior Decor — Portfolio</title>
+    <meta name="description" content="Interior decor portfolio showcasing projects, services and contact." />
+    <style>
+        :root{
+            --bg:#faf8f6; --card:#ffffff; --accent:#b08968; --muted:#6b6b6b; --radius:12px;
+            --max-width:1100px; --ff:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0; font-family:var(--ff); background:linear-gradient(180deg,#fff,#f7f5f3);
+            color:#222; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+        }
+        .wrap{max-width:var(--max-width); margin:32px auto; padding:24px; display:grid; gap:28px}
+        header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .brand{display:flex;align-items:center;gap:12px}
+        .logo{
+            width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#e0c9a8);
+            display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+        }
+        nav{display:flex;gap:12px}
+        nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px}
+        nav a:hover{background:#fff; color:#000; box-shadow:0 1px 4px rgba(0,0,0,.06)}
+        .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+        .hero h1{margin:0;font-size:2rem;line-height:1.05}
+        .hero p{color:var(--muted);margin:12px 0 0}
+        .cta{margin-top:16px;display:flex;gap:12px}
+        .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none}
+        .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(17,17,17,.06)}
+        .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+        .project{border-radius:12px;overflow:hidden;background:#eee}
+        .project img{width:100%;height:160px;object-fit:cover;display:block}
+        .project .meta{padding:12px}
+        .grid-2{display:grid;grid-template-columns:1fr 320px;gap:18px}
+        footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:0.9rem;padding-top:12px}
+        form{display:grid;gap:10px}
+        input,textarea,button{font:inherit}
+        input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e2df;background:#fff}
+        textarea{min-height:120px;resize:vertical}
+        @media (max-width:880px){
+            .hero,.grid-2{grid-template-columns:1fr}
+            nav{display:none}
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap" role="main">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden="true">ID</div>
+                <div>
+                    <div style="font-weight:700">Interior Decor</div>
+                    <div style="font-size:0.85rem;color:var(--muted)">Residential & Commercial</div>
+                </div>
+            </div>
+            <nav aria-label="Primary">
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div>
+                <h1>Beautiful interiors that balance form and function</h1>
+                <p>Curated residential and commercial designs. Timeless palettes, thoughtful layouts, and bespoke furnishings that reflect your lifestyle.</p>
+                <div class="cta">
+                    <a class="btn" href="#contact">Request Consultation</a>
+                    <a href="#projects" style="align-self:center;color:var(--muted)">View Projects →</a>
+                </div>
+            </div>
+            <div class="card" aria-hidden="false">
+                <img src="https://via.placeholder.com/420x300.png?text=Featured+Project" alt="Featured project" style="width:100%;height:220px;object-fit:cover;border-radius:8px">
+                <div style="padding-top:12px">
+                    <strong>Modern Apartment — Downtown</strong>
+                    <div style="color:var(--muted);font-size:0.95rem;margin-top:8px">A full redesign focused on natural textures, layered lighting, and multipurpose furniture.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="card">
+            <h2 style="margin-top:0">Selected Projects</h2>
+            <div class="projects" aria-live="polite">
+                <article class="project">
+                    <img src="https://via.placeholder.com/800x600.png?text=Living+Room" alt="Living room project">
+                    <div class="meta">
+                        <strong>Cozy Living Room</strong>
+                        <div style="color:var(--muted);font-size:0.9rem">Warm neutrals, custom built-ins and ambient lighting.</div>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="https://via.placeholder.com/800x600.png?text=Office" alt="Office project">
+                    <div class="meta">
+                        <strong>Home Office</strong>
+                        <div style="color:var(--muted);font-size:0.9rem">Efficient layout, ergonomic solutions, and integrated storage.</div>
+                    </div>
+                </article>
+                <article class="project">
+                    <img src="https://via.placeholder.com/800x600.png?text=Kitchen" alt="Kitchen project">
+                    <div class="meta">
+                        <strong>Open Kitchen</strong>
+                        <div style="color:var(--muted);font-size:0.9rem">Timeless surfaces and a peninsula for casual dining.</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="services" class="grid-2">
+            <div class="card">
+                <h3 style="margin-top:0">Services</h3>
+                <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+                    <li>Full interior design & project management</li>
+                    <li>Space planning & custom furniture design</li>
+                    <li>Material sourcing & styling</li>
+                </ul>
+                <p style="margin-top:12px;color:var(--muted)">Available for residential and light commercial projects. Lead times and pricing vary by scope.</p>
+            </div>
+            <aside class="card" id="contact" aria-labelledby="contact-title">
+                <h3 id="contact-title" style="margin-top:0">Contact</h3>
+                <form action="#" onsubmit="event.preventDefault(); alert('Form submitted (demo)');">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div style="margin-top:12px;color:var(--muted);font-size:0.9rem">
+                    Or email: <a href="mailto:hello@interiordecor.example">hello@interiordecor.example</a>
+                </div>
+            </aside>
+        </section>
+
+        <footer>
+            <div>© <span id="year"></span> Interior Decor</div>
+            <div style="color:var(--muted)">Made with care — <a href="#projects">See work</a></div>
+        </footer>
+    </main>
+
+    <script>
+        // small helpers
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
